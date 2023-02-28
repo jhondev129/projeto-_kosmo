@@ -1,3 +1,13 @@
-html {
-    background-color: #9DA5B5;
+body{
+width: 100vw;
+height: 100vh;
+background-image: url(imagem/carro.png);
+background-size: 100%;
+background-repeat: no-repeat;
 }
+
+.text{
+    color: white;
+    font-family: serif;
+}
+
