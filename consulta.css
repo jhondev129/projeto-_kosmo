@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family= Bebas+Neue & family = Phudu:wght@300;400;500;600;700 & display=swap');
+
+body {
+  background: #e0e0e0;
+  padding-bottom: 1em;
+  height: 100vh;
+}
+
+header h1 {
+  font-family: 'Bebas Neue', cursiva;
+  color: #a63a3a;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 1em;
+}
+
+.formulario {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 1em;
+  user-select: none;
+}
+
+.card-back {
+  display: none;
+}
+
+.card-fliped .card-face {
+  display: none;
+}
+
+.card-fliped .card-back {
+  display: block;
+}
+
+.card-body {
+  background-color: #ECA72C;
+  box-shadow: 0 0.1rem 0.8rem #000000;
+
+}
+
+label {
+  font-weight: bold;
+}
+.cadastro{
+    color: white;
+    background-color: #a63a3a;
+    border-radius: 1px;
+    box-shadow: 0 0.1rem 0.5rem #000000;
+    margin-bottom: 1rem;
+    display: block;
+    width: 110px;
+    height: 30px;
+    text-align: center;
+}
+
+.cadastro:hover{
+    color: white;
+    text-decoration: none;
+    color: #ECA72C;
+}
+.input-group-addon{
+  color: #000000;
+}

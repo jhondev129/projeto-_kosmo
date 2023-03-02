@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-br" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Abastecer</title>
+    <meta name="description" content="Calcular o quanto de combustível é necessário para determinada distância.">
+    <meta name="keywords" content="Carro, Combustivel, Consumo, Gasolina, Alcool">
+    <meta name="author" content="Tarcísio Deschamps Silva">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="consulta.css" />
+
+<body ng-controller="app" class="container-fluid" onload="modelos()">
+    <header>
+        <h1>kosmo fuel</h1>
+    </header>
+
+    <div class="card formulario">
+        <div class="card-body card-face">
+            <form name="formulario">
+                <div class="form-group">
+                    <label for="gasolia">Preço do combustível</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">R$</span>
+                        <input type="number" title="Preço atual do combustível" min="0"
+                            class="form-control form-control-lg" id="gasolina" ng-model="viagem.precoGasolina"
+                            placeholder="00,00" required ng-disabled="ativado">
+                    </div>
+
+                    <label for="gasolia">marca do veículo</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">modelo</span>
+                        <select name="carros" id="marcas" >
+                            click
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="consumo">Consumo do veículo</label>
+                    <div class="input-group">
+                        <input type="number" title="km/L do veículo" min="0" class="form-control form-control-lg"
+                            id="consumo" ng-model="viagem.consumoCarro" placeholder="00" required ng-disabled="ativado">
+                        <span class="input-group-addon">Km/L</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="distancia">Qual a distância da viagem?</label>
+                    <div class="input-group">
+                        <input type="number" title="Distância da viagem" min="0" class="form-control form-control-lg"
+                            id="distancia" ng-model="viagem.distanciaViagem" placeholder="00" required
+                            ng-disabled="ativado">
+                        <span class="input-group-addon">Km</span>
+                    </div>
+                <br>
+                    <a class="cadastro" href="../cadastro.html">Novo veiculo</a>
+               
+        </div>
+        <script>
+            const menu = document.querySelector('.menu');
+const NavMenu = document.querySelector('.nav-menu');
+
+const marcas = ["bmw", "fiat", "ford", "mercedes"]
+    const selectMarcas = document.getElementById('marcas')
+/*
+menu.addEventListener('click', () => {
+    menu.classList.toggle('ativo');
+    NavMenu.classList.toggle('ativo');
+})*/
+
+function modelos() {
+    
+
+    for (let i = 0; i < marcas.length; i++) {
+        selectMarcas.innerHTML += `
+        <option>${marcas[i]}</option>
+        `
+    }
+}
+
+selectMarcas.addEventListener('click', (e) =>{
+    /*for (let i = 0; i < marcas.length; i++) {
+        selectMarcas.innerHTML += `
+        <option>${marcas[i]}</option>
+        `
+        
+    }  */
+    console.log(e.preventDefault())
+})
+
+
+
+        </script>
+</body>
+
+</html>
